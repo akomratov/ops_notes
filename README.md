@@ -1,2 +1,6 @@
-# ops_notes
-Ops notes
+# Ops notes
+
+Screen Multiplexers
+VIM
+SSH
+
