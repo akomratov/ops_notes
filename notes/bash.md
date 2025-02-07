@@ -1,7 +1,23 @@
-1. [Several commands](#several-commands)
-2. if-else
-3. loop
-4. read file
+1. [Help](#help)
+2. [History](#history)
+3. [Several commands](#several-commands)
+4. if-else
+5. loop
+6. read file
+
+## Help
+```bash
+man bash
+man builtin
+# help on builtin command 'history'
+help history
+```
+
+## History
+```bash
+# show last N commands from bash history
+history N
+```
 
 ## Several commands
 * `A; B` - run A and then run B, regardless of A failed or succeeded
