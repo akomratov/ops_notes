@@ -7,7 +7,24 @@
 
 ## grep
 
+Parallel log grep:
+```bash
+ls /var/log/HOSTS/*/*.service.{a,b,c,d}.ru/archive/service.log-20241003*.gz 2>/dev/null | \
+xargs -P 20 -I {} grep search_string {} > results.log
+```
+
 ## sed
+```bash
+# remove lines containing 'DEBUG'
+sed '/DEBUG/d' service.log
+
+# the same and update service.log with sed output (GNU)
+sed -i '/DEBUG/d' service.log
+
+# the same for BSD sed
+sed -i '' '/DEBUG/d' service.log
+
+```
 
 ## awk
 
@@ -16,4 +33,6 @@
 ## tr
 
 ## column
-
+```bash
+(printf "PERM LINKS OWNER GROUP SIZE DAY MONTH YEAR NAME\n"; ls -l | sed 1d) | column -t
+```
