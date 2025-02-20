@@ -7,16 +7,37 @@
 
 ## Help
 ```bash
+
 man bash
+
 man builtin
+
 # help on builtin command 'history'
 help history
 ```
 
 ## History
 ```bash
+
 # show last N commands from bash history
 history N
+```
+
+```bash
+!!   repeat the previous line
+
+# arguments
+!*   all arguments
+!:0  the command
+!^   first argument
+!$   last argument
+!:N  N-th argument
+
+!:2-4   2 to 4 arguments
+!:2-$   2 to last arguments
+!:2*    2 to last arguments
+!:2-    2 to next to last arguments
+
 ```
 
 ## Several commands

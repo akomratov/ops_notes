@@ -4,6 +4,8 @@
 4. [cut](#cut)
 5. [tr](#tr)
 6. [column](#column)
+7. [Cases](#cases)
+* [Line count](#line-count)
 
 ## grep
 
@@ -35,4 +37,16 @@ sed -i '' '/DEBUG/d' service.log
 ## column
 ```bash
 (printf "PERM LINKS OWNER GROUP SIZE DAY MONTH YEAR NAME\n"; ls -l | sed 1d) | column -t
+```
+
+## Cases
+
+### Line count
+```bash
+grep -c . file.txt
+grep -c ^ file.txt
+awk 'END{print NR}' file.txt
+
+# wc counts only New line characters, thus result may differ from grep and awk
+wc -l file.txt
 ```
